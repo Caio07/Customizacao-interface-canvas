@@ -1,6 +1,27 @@
-/*********************
-BARRA DIREITA
-*********************/
+/* -------------------------------- 
+	ÍNDICE
+	-------------------------------- 
+
+1. BARRA DIREITA
+2. BARRA ESQUERDA
+3. ÁREA DE CONTÉÚDO
+4. DISCIPLINA
+5. CALENDÁRIO
+6. LIVRO DE NOTAS
+7. MENU DE AJUDA
+8. BOTÃO IMPRIMIR
+9. ESTILO PARA MOBILE
+	9.1 MENU E CONTEÚDO PRINCIPAL
+	9.2 CALENDÁRIO
+	9.3 MENSAGENS
+	9.4 DISCIPLINAS
+10. Timeline EAD
+*/
+
+/* -------------------------------- 
+
+	1. BARRA DIREITA
+	-------------------------------- */
 
 #right-side-wrapper {
 
@@ -166,10 +187,11 @@ BARRA DIREITA
 	display: none;
 }
 
-/*********************
-BARRA ESQUERDA
-*********************/
+/* -------------------------------- 
 
+	2. BARRA ESQUERDA
+
+	-------------------------------- */
 body.primary-nav-expanded .ic-app-header{
 
 	width: 230px;
@@ -346,7 +368,6 @@ body.primary-nav-expanded .menu-item-icon-container .ic-avatar{
 .ic-app-header__menu-list-item.ic-app-header__menu-list-item--active .ic-app-header__menu-list-link{
 
 	background: rgba(56,63,71,0.3);
-    /*border-left: 5px solid #fff;*/
     padding: 0.4375rem 0.4375rem;
 
 }
@@ -446,9 +467,11 @@ body.primary-nav-expanded .menu-item__text{
 }
 
 
-/*********************
-ÁREA DE CONTEÚDO
-*********************/
+/* -------------------------------- 
+
+	3. ÁREA DE CONTEÚDO
+
+	-------------------------------- */
 
 
 body:not(.no-headers).primary-nav-expanded .ic-Layout-wrapper{
@@ -468,10 +491,11 @@ body:not(.no-headers).primary-nav-expanded .ic-Layout-wrapper{
 	font-size: 1rem;
 }
 
+/* -------------------------------- 
 
-/*********************
-DISCIPLINA
-*********************/
+	4. DISCIPLINA
+
+	-------------------------------- */
 
 .item-group-container{
 
@@ -492,9 +516,11 @@ DISCIPLINA
     border-bottom: 1px solid #008312;
    }
 
-/*********************
-CALENDÁRIO
-*********************/
+/* -------------------------------- 
+
+	5. CALENDÁRIO
+
+	-------------------------------- */
 
 .navigate_today{
 	border-radius: 5px;
@@ -654,9 +680,11 @@ CALENDÁRIO
 		text-align: left;
 	}
 
-/*********************
-Livro de Notas
-*********************/
+/* -------------------------------- 
+
+	6. LIVRO DE NOTAS
+
+	-------------------------------- */
 
 .student-name{
 	padding-left: 0.75rem;
@@ -680,10 +708,11 @@ Livro de Notas
     vertical-align: middle;
 }
 
-/*********************
-Menu ajuda
-*********************/
+/* -------------------------------- 
 
+	7. MENU DE AJUDA
+
+	-------------------------------- */
 .contatos-ead h4{
 
 	color:var(--eHiXd-linkColor);
@@ -699,4 +728,759 @@ Menu ajuda
 .contatos-ead div{
 
 	margin-bottom: 0.5rem;
+}
+
+/* -------------------------------- 
+
+	8. BOTÃO IMPRIMIR
+
+	-------------------------------- */
+
+@media print{
+	.print-button{
+		display: none;
+	}
+}	
+
+/* -------------------------------- 
+
+	9. ESTILO PARA MOBILE
+
+	-------------------------------- */
+@media only screen and (max-device-width: 480px){
+
+	/* -------------------------------- 
+
+	9.1 MENU E CONTEÚDO PRINCIPAL
+
+	-------------------------------- */
+
+	body:not(.is-inside-submission-frame):not(.embedded):not(.dashboard-is-planner){
+
+		min-width: auto;
+	}
+
+	.pages .header-bar-outer-container .header-bar-container{
+
+		max-width: 100% !important;
+   		min-width: auto !important;
+	}
+
+	.ic-app-crumbs{
+		display: none;
+	}
+
+	#course_home_content{
+		margin-bottom: 2rem;
+	}
+
+	.mostrar-todo{
+		margin-left: 0 !important;
+		
+	}
+
+	#todolist-mobile{
+		display: block; 
+	}
+
+	#global_nav_todo_link .menu-item-icon-container{
+
+	background-image: url(https://kb.espm.br/icone-fazer.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 28px;
+    height: 28px;
+    vertical-align: middle;
+	}
+
+
+	.ic-app{
+		max-height: 100vh;
+		max-width: 100vW;
+	}
+
+	.ic-app-header{
+		height: 7%;
+		bottom: 0;
+		top: auto;
+		width: 100% !important;
+	}
+
+	.ic-app-header__menu-list-link{
+		text-align: center;
+	}
+
+	.ic-app-header__main-navigation{
+		padding-top: 0.5rem;
+	}
+
+	#global_nav_profile_link .menu-item-icon-container{
+		margin-bottom: 0;
+	}
+
+
+	.ic-app-header__secondary-navigation{
+
+		display: none;
+	}
+
+	.ic-app-header__menu-list{
+		margin-top: 0;
+	    display: flex;
+	    align-items: baseline;
+	    justify-content: space-around;
+	}
+
+	.menu-item__text{
+		display: none !important;
+	}
+
+	.ic-app-header__menu-list-item.ic-app-header__menu-list-item--active .ic-app-header__menu-list-link{
+		border: none;
+	}
+
+	.ic-app-header__menu-list-link:not(.ic-app-header__menu-list-link--nav-toggle){
+
+		padding: 0 !important;
+	}
+
+	.ic-app-footer{
+
+		display: none;
+	}
+
+	.ic-Layout-wrapper {
+    	margin-left: 0 !important;
+   		max-height: 90vh;
+   		max-width: 100vw;
+   		min-height: auto !important;
+	}	
+
+	.ic-Layout-columns{
+		max-height: 90vh !important;
+		max-width: 100vw;
+	}
+
+	.ic-DashboardCard{
+		width: 45%;
+		margin: 0 0.8rem 15px 0;
+
+	}
+
+	.ic-app-main-content__secondary{
+		padding: 5px 24px 0 24px;
+	}
+
+	.menu-todolist{
+		position: absolute !important;
+	    height: 100vh !important;
+	    top: 0;
+	    z-index: 99;
+		margin-left: -500px;
+		transition: all 0.5s ease;
+		max-width: 100%;
+	}
+
+	#right-side *+.events_list{
+		margin: 0 !important;
+	}
+
+	body:not(.ic-no-flex-layout):not(.embedded) .ic-app-main-content{
+		max-height: 90vh;
+		min-width: fit-content;
+	}
+
+	.ic-DashboardCard__box{
+		padding-top: 1rem !important;
+	}
+
+	.ic-DashboardCard__header_hero{
+		height: 100px !important;
+	}
+
+	.primary-nav-expanded #nav-tray-portal [data-cid="Transition"]{
+		margin-left: 0 !important;
+	}
+
+	.tray-with-space-for-global-nav{
+
+		margin-left: 0 !important;
+	}
+
+	.ic-DashboardCard__action-container{
+
+		display: none;
+	}
+
+	#menu{
+		margin-top: 0 !important;
+	}
+
+	.menu-item-icon-container .ic-avatar{
+
+		width: 36px !important;
+		height: 36px !important;
+	}
+
+	.menu-item-icon-container{
+		vertical-align: middle;
+	}
+
+	.ic-app-header__menu-list-item.ic-app-header__menu-list-item--active .ic-app-header__menu-list-link{
+
+		background: none; 
+	}
+	/* -------------------------------- 
+
+	9.2 CALENDÁRIO
+
+	-------------------------------- */
+
+	#calendar-app{
+		margin-bottom: 1rem;
+	}
+
+	#calendar_header .header-table-cell{
+
+		vertical-align: top;
+	}
+
+	.ui-dialog.ui-widget-content{
+		width: 80% !important;
+	}
+
+	#create_new_event_link:after{
+		content: "";
+		padding: 0 !important;
+	}
+
+	#minical{
+		display: none;
+	}
+
+	#calendar_header .header-table-right{
+		text-align: left;
+    	width: 100%;
+    	margin-top: 1rem;
+	}
+
+	#calendar_header .header-table-cell{
+		display: block;
+	}
+
+	#context-list .context_list_context{
+		display: inline-block;
+	}
+
+	.fc-content{
+		padding: 0;
+	}
+
+	#edit_calendar_event_form{
+		width: auto !important;
+	}
+
+	#edit_calendar_event_form_holder{
+		padding: 0 !important;
+	}
+
+	#calendar_event_start_time, #calendar_event_end_time{
+		width: 30px !important;
+	}
+
+	#calendar_event_location_name{
+		width: 145px !important;
+	}
+
+	#calendar_event_context{
+		width: 165px !important;
+	}
+
+	.fc-day-header__week-day{
+		font-size: 0.8rem !important;
+	}
+
+	.fc-day-header__week-number{
+		font-size: 1.5rem !important;
+	}
+
+	.fc-scroller{
+		overflow-y: auto;
+	}
+
+	.fc-time-grid-container{
+		height: 150px !important;
+	}
+
+	/* -------------------------------- 
+
+	9.3 MENSAGENS
+
+	-------------------------------- */
+
+
+	.conversations .panel{
+		height: auto !important;
+	}
+
+	.messaging-wrapper{
+
+		top: 160px;
+	}
+
+	.bootstrap-select:not([class*="span"]){
+		width: 65% !important;
+	}
+
+	#conversation_filter{
+		width: 70% !important;
+	}
+
+	.remover-mensagem{
+		display: none !important;
+	}
+
+	.aparecer-mensagem{
+		display: block !important;
+	}
+
+	.message-detail{
+		width: 100% !important;
+		
+	}
+
+	.message-detail.span8 .no-messages{
+		display: none;
+	}
+
+	.panel__secondary .form-search{
+		margin-top: 0.5rem;
+	}
+
+	.message-list-scroller{
+		border: none !important;
+		width: 100% !important;
+	}
+
+	.touch .message-detail .actions{
+		display: none;
+	}
+
+}
+
+
+	/* -------------------------------- 
+
+	9.4 DISCIPLINAS
+
+	-------------------------------- */
+
+	.ig-list .ig-row{
+		box-shadow: -1px 1px 10px #DEDEDE;
+   		margin-bottom: 0.5rem;
+   		border: none;
+	}
+
+	.item-group-condensed .ig-row{
+		border: none !important;
+	}
+
+	.item-group-condensed .ig-list li:first-child .ig-row, .item-group-condensed .ig-list li:first-of-type .ig-row, .item-group-condensed .first_visible .ig-row{
+		border: none !important;
+	}
+
+	.item-group-condensed .ig-list li:nth-child(even) .ig-row{
+		background: #EEE !important; 
+	}
+
+	.list-view a.active{
+		background-color: #2f608c !important;
+	}
+
+
+
+
+
+
+
+
+/* -------------------------------- 
+
+Timeline EAD
+
+-------------------------------- */
+
+.cd-horizontal-timeline ul, .cd-horizontal-timeline ol{
+	list-style: none;
+}
+.cd-horizontal-timeline {
+  opacity: 0;
+  margin: 2em auto;
+  -webkit-transition: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+.cd-horizontal-timeline::before {
+  /* never visible - this is used in jQuery to check the current MQ */
+  content: 'mobile';
+  display: none;
+}
+.cd-horizontal-timeline.loaded {
+  /* show the timeline after events position has been set (using JavaScript) */
+  opacity: 1;
+}
+.cd-horizontal-timeline .timeline {
+  position: relative;
+  height: 100px;
+  width: 90%;
+  margin: 0 auto;
+}
+.cd-horizontal-timeline .events-wrapper {
+  position: relative;
+  height: 100%;
+  margin: 0 40px;
+  overflow: hidden;
+}
+
+.cd-horizontal-timeline .events-wrapper::before {
+  left: 0;
+  background-image: -webkit-linear-gradient( left , #f8f8f8, rgba(248, 248, 248, 0));
+  background-image: linear-gradient(to right, #f8f8f8, rgba(248, 248, 248, 0));
+}
+.cd-horizontal-timeline .events-wrapper::after {
+  right: 0;
+  background-image: -webkit-linear-gradient( right , #f8f8f8, rgba(248, 248, 248, 0));
+  background-image: linear-gradient(to left, #f8f8f8, rgba(248, 248, 248, 0));
+}
+.cd-horizontal-timeline .events-ead {
+  /* this is the grey line/timeline */
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 49px;
+  height: 2px;
+  /* width will be set using JavaScript */
+  background: #dfdfdf;
+  -webkit-transition: -webkit-transform 0.4s;
+  -moz-transition: -moz-transform 0.4s;
+  transition: transform 0.4s;
+}
+.cd-horizontal-timeline .filling-line {
+  /* this is used to create the green line filling the timeline */
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #7b9d6f;
+  -webkit-transform: scaleX(0);
+  -moz-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  -o-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -ms-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+  -webkit-transition: -webkit-transform 0.3s;
+  -moz-transition: -moz-transform 0.3s;
+  transition: transform 0.3s;
+}
+.cd-horizontal-timeline .events-ead a {
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+  text-align: center;
+  font-size: 1rem;
+  padding-bottom: 15px;
+  color: #383838;
+  /* fix bug on Safari - text flickering while timeline translates */
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.cd-horizontal-timeline .events-ead a::after {
+  /* this is used to create the event spot */
+  content: '';
+  position: absolute;
+  left: 50%;
+  right: auto;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  bottom: -5px;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  border: 2px solid #dfdfdf;
+  background-color: #f8f8f8;
+  -webkit-transition: background-color 0.3s, border-color 0.3s;
+  -moz-transition: background-color 0.3s, border-color 0.3s;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+.no-touch .cd-horizontal-timeline .events-ead a:hover::after {
+  background-color: #7b9d6f;
+  border-color: #7b9d6f;
+}
+.cd-horizontal-timeline .events-ead a.selected {
+  pointer-events: none;
+}
+.cd-horizontal-timeline .events-ead a.selected::after {
+  background-color: #7b9d6f;
+  border-color: #7b9d6f;
+}
+.cd-horizontal-timeline .events-ead a.older-event::after {
+  border-color: #7b9d6f;
+}
+@media only screen and (min-width: 1100px) {
+  .cd-horizontal-timeline {
+    margin: 6em auto;
+  }
+  .cd-horizontal-timeline::before {
+    /* never visible - this is used in jQuery to check the current MQ */
+    content: 'desktop';
+  }
+}
+
+.cd-timeline-navigation a {
+  /* these are the left/right arrows to navigate the timeline */
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  bottom: auto;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  height: 34px;
+  width: 34px;
+  border-radius: 50%;
+  border: 2px solid #dfdfdf;
+  /* replace text with an icon */
+  overflow: hidden;
+  color: transparent;
+  text-indent: 100%;
+  white-space: nowrap;
+  -webkit-transition: border-color 0.3s;
+  -moz-transition: border-color 0.3s;
+  transition: border-color 0.3s;
+}
+.cd-timeline-navigation a::after {
+  /* arrow icon */
+  content: '';
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  left: 50%;
+  top: 50%;
+  bottom: auto;
+  right: auto;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  /*background: url(../img/cd-arrow.svg) no-repeat 0 0;*/
+}
+.cd-timeline-navigation a.prev {
+  left: 0;
+  -webkit-transform: translateY(-50%) rotate(180deg);
+  -moz-transform: translateY(-50%) rotate(180deg);
+  -ms-transform: translateY(-50%) rotate(180deg);
+  -o-transform: translateY(-50%) rotate(180deg);
+  transform: translateY(-50%) rotate(180deg);
+}
+.cd-timeline-navigation a.next {
+  right: 0;
+}
+.no-touch .cd-timeline-navigation a:hover {
+  border-color: #7b9d6f;
+}
+.cd-timeline-navigation a.inactive {
+  cursor: not-allowed;
+}
+.cd-timeline-navigation a.inactive::after {
+  background-position: 0 -16px;
+}
+.no-touch .cd-timeline-navigation a.inactive:hover {
+  border-color: #dfdfdf;
+}
+
+#welcome-message{
+	text-align: center;
+}
+
+.cd-horizontal-timeline .events-content {
+  position: relative;
+  width: 100%;
+  margin: 2em 0;
+  overflow: hidden;
+  -webkit-transition: height 0.4s;
+  -moz-transition: height 0.4s;
+  transition: height 0.4s;
+}
+.cd-horizontal-timeline .events-content li {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  left: 0;
+  top: 0;
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  -o-transform: translateX(-100%);
+  transform: translateX(-100%);
+  opacity: 0;
+  -webkit-animation-duration: 0.4s;
+  -moz-animation-duration: 0.4s;
+  animation-duration: 0.4s;
+  -webkit-animation-timing-function: ease-in-out;
+  -moz-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+}
+.cd-horizontal-timeline .events-content li.selected {
+  /* visible event content */
+  position: relative;
+  z-index: 2;
+  opacity: 1;
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
+}
+.cd-horizontal-timeline .events-content li.enter-right, .cd-horizontal-timeline .events-content li.leave-right {
+  -webkit-animation-name: cd-enter-right;
+  -moz-animation-name: cd-enter-right;
+  animation-name: cd-enter-right;
+}
+.cd-horizontal-timeline .events-content li.enter-left, .cd-horizontal-timeline .events-content li.leave-left {
+  -webkit-animation-name: cd-enter-left;
+  -moz-animation-name: cd-enter-left;
+  animation-name: cd-enter-left;
+}
+.cd-horizontal-timeline .events-content li.leave-right, .cd-horizontal-timeline .events-content li.leave-left {
+  -webkit-animation-direction: reverse;
+  -moz-animation-direction: reverse;
+  animation-direction: reverse;
+}
+.cd-horizontal-timeline .events-content li > * {
+  margin: 0 auto;
+}
+.cd-horizontal-timeline .events-content h2 {
+  font-weight: bold;
+  font-size: 1.2rem;
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.cd-horizontal-timeline .events-content em {
+  display: block;
+  font-style: italic;
+  margin: 10px auto;
+}
+.cd-horizontal-timeline .events-content em::before {
+  content: '- ';
+}
+.cd-horizontal-timeline .events-content p {
+  font-size: 1rem;
+  color: #959595;
+}
+.cd-horizontal-timeline .events-content em, .cd-horizontal-timeline .events-content p {
+  line-height: 1.6;
+}
+@media only screen and (min-width: 768px) {
+  .cd-horizontal-timeline .events-content h2 {
+    font-size: 1.2rem;
+  }
+  .cd-horizontal-timeline .events-content em {
+    font-size: 1rem;
+  }
+  .cd-horizontal-timeline .events-content p {
+    font-size: 1rem;
+  }
+}
+
+@-webkit-keyframes cd-enter-right {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0%);
+  }
+}
+@-moz-keyframes cd-enter-right {
+  0% {
+    opacity: 0;
+    -moz-transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    -moz-transform: translateX(0%);
+  }
+}
+@keyframes cd-enter-right {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    -o-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0%);
+    -moz-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    -o-transform: translateX(0%);
+    transform: translateX(0%);
+  }
+}
+@-webkit-keyframes cd-enter-left {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0%);
+  }
+}
+@-moz-keyframes cd-enter-left {
+  0% {
+    opacity: 0;
+    -moz-transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    -moz-transform: translateX(0%);
+  }
+}
+@keyframes cd-enter-left {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0%);
+    -moz-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    -o-transform: translateX(0%);
+    transform: translateX(0%);
+  }
 }
