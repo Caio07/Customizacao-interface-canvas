@@ -1,0 +1,702 @@
+/*********************
+BARRA DIREITA
+*********************/
+
+#right-side-wrapper {
+
+	background-color: #F3F3F3; 
+    min-height: 100vh;
+}
+
+#right-side .events_list .event-details:after, #right-side .events_list .todo-details:after, #right-side .to-do-list .event-details:after, #right-side .to-do-list .todo-details:after{
+
+	content: none !important;
+}
+
+.ic-notification{
+		border-color: #0d5b73 !important;
+}
+
+.ic-notification__icon,.btn-primary, .Button--primary{
+	background: #0d5b73 !important;
+	border-color: #0d5b73 !important;
+}
+
+
+.ToDoSidebarItem{
+
+	background-color: #fff;
+	padding: 15px !important;
+    border-radius: 5px;
+    margin: 10px 0 !important;
+    box-shadow: -1px 1px 10px #DEDEDE;
+    border-left: 7px solid #0d5b73;
+}
+
+.todo-details__title, .event-details__title{
+ 	font-weight: bold !important;
+ }
+
+.todo, .right-side-list .event{
+	background-color: #fff;
+	padding: 10px !important;
+    border-radius: 5px;
+    margin: 10px 0 !important;
+    box-shadow: -1px 1px 10px #DEDEDE;
+    border-left: 7px solid #2f608c;
+
+ }
+
+.ToDoSidebarItem__Info, .ToDoSidebarItem__Icon{
+	margin-top: 0;
+	max-width: 80%;
+}
+
+.ToDoSidebarItem svg, .icon-assignment{
+
+	color: #2f608c !important;
+}
+
+.ToDoSidebarItem__Title a span{
+	font-size: 1rem !important;
+}
+
+#right-side h2{
+	
+	color: #2f608c !important;
+}
+
+/*Ícone fechar cards todo list*/
+.icon-x{
+
+	color: #0d5b73;
+	margin-right: 0.7rem;
+}
+
+.ToDoSidebarItem__Title a{
+
+	text-decoration: none !important;
+    font-weight: bold !important;
+}
+
+.todo-list-header{
+
+	border-bottom: none !important;
+
+}
+
+#right-side *+.events_list{
+
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	text-align: center;
+}
+
+
+#right-side .button-sidebar-wide{
+
+	color: #2f608c;
+    border: none;
+    padding-right: 25px !important;
+    padding-bottom: 0;
+}
+
+.button-sidebar-wide:hover{
+	background: none !important;
+	color: #275075;
+}
+
+.button-sidebar-wide:after {
+        content: url("https://kb.espm.br/seta-2.svg");
+        width: 24px;
+        height: 24px;
+        float: right;
+        margin-right: -20px;
+}
+
+#right-side .button-sidebar-wide::before{
+	content: "";
+    position: absolute;
+    width: 50%;
+    height: 1px;
+    bottom: 0;
+    left: 5%;
+    border-bottom: 2px dotted #2f608c;
+}
+
+#right-side .button-sidebar-wide i{
+
+	display: none;
+}
+
+#right-side .shared-space h2{
+
+	display: block;
+}
+
+.events_list .shared-space{
+	margin-bottom: 1rem !important;
+}
+
+#right-side .events_list .event-list-view-calendar{
+
+	float: none !important;
+}
+
+#right-side h2, #right-side .h2{
+
+	border: none;
+	text-align: center;
+}
+
+#right-side .events small{
+
+	text-align: center;
+}
+
+.todo-badge-wrapper .todo-badge, .ic-DashboardCard__action-badge{
+		background: #2f608c !important;
+	}
+
+.ic-DashboardCard__action-container{
+	margin-top: 17px !important;
+}
+
+#todolist-mobile{
+	display: none;
+}
+
+/*********************
+BARRA ESQUERDA
+*********************/
+
+body.primary-nav-expanded .ic-app-header{
+
+	width: 230px;
+}
+
+/*Esconder menu Commons e ferramenta de vídeo*/
+#context_external_tool_23_menu_item, #context_external_tool_2_menu_item{
+	display: none;
+}
+
+#primaryNavToggle .menu-item-icon-container{
+
+	background-image: url(https://kb.espm.br/icone-menu.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 28px;
+    height: 28px;
+
+}
+/*Botão menu da esquerda para expandir*/
+[title~="Expandir"]{
+	padding-right: 0 !important;
+	text-align: center !important;
+}
+
+/*Alteração de ícones do menu*/
+
+#global_nav_accounts_link .menu-item-icon-container{
+
+	background-image: url(https://kb.espm.br/icone-admin.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 28px;
+    height: 28px;
+    vertical-align: middle;
+
+}
+
+#global_nav_dashboard_link .menu-item-icon-container{
+
+	background-image: url(https://kb.espm.br/icone-home.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 28px;
+    height: 28px;
+    vertical-align: middle;
+
+}
+
+#global_nav_courses_link .menu-item-icon-container{
+
+	background-image: url(https://kb.espm.br/icone-disciplinas.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 28px;
+    height: 28px;
+    vertical-align: middle;
+
+}
+
+#global_nav_calendar_link .menu-item-icon-container{
+
+	background-image: url(https://kb.espm.br/icone-calendario.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 28px;
+    height: 28px;
+    vertical-align: middle;
+
+}
+
+#global_nav_conversations_link .menu-item-icon-container{
+
+	background-image: url(https://kb.espm.br/icone-mensagens.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 28px;
+    height: 28px;
+    vertical-align: middle;
+
+}
+
+#global_nav_help_link .menu-item-icon-container{
+
+	background-image: url(https://kb.espm.br/icone-ajuda.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 28px;
+    height: 28px;
+    vertical-align: middle;
+
+}
+
+#global_nav_groups_link .menu-item-icon-container{
+
+	background-image: url(https://kb.espm.br/icone-grupos.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 28px;
+    height: 28px;
+    vertical-align: middle;
+
+}
+
+#global_nav_portal_link .menu-item-icon-container{
+
+	background-image: url(https://kb.espm.br/icone-portal.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 28px;
+    height: 28px;
+    vertical-align: middle;
+
+}
+
+#new_user_tutorial_toggle{
+	background-image: url(https://kb.espm.br/icone-tutorial.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+}
+
+#global_nav_profile_link{
+	background: none !important;
+}
+
+#global_nav_profile_link .menu-item-icon-container{
+
+	text-align: center;
+    width: 100%;
+    margin-bottom: 1rem;
+
+}
+
+#global_nav_profile_link .menu-item__text{
+	display: none;
+}
+
+#primaryNavToggle svg, #global_nav_accounts_link svg, #global_nav_groups_link svg, #global_nav_dashboard_link svg, #global_nav_courses_link svg, #global_nav_calendar_link svg, #global_nav_conversations_link svg, #global_nav_help_link svg, #new_user_tutorial_toggle span{
+
+	display: none !important;
+}
+
+.menu-item-icon-container{
+
+	display: inline-block;
+}
+
+.ic-app-header{
+
+	background-color: #7c91a2 !important;
+}
+
+#menu{
+
+	margin-top: 3rem;
+}
+
+.ic-app-header__logomark-container{
+
+	width: 70%;
+	margin: 100px auto 0 auto;
+
+}
+
+body.primary-nav-expanded .menu-item-icon-container .ic-avatar{
+
+	width: 92px;
+    height: 92px;
+}
+
+.ic-app-header__menu-list-item.ic-app-header__menu-list-item--active .ic-app-header__menu-list-link{
+
+	background: rgba(56,63,71,0.3);
+    /*border-left: 5px solid #fff;*/
+    padding: 0.4375rem 0.4375rem;
+
+}
+
+
+.ic-app-header__menu-list-item.ic-app-header__menu-list-item--active:active{
+
+	border:none;
+}
+
+.ic-app-header__menu-list-link.ic-app-header__menu-list-link--nav-toggle{
+
+	padding-right: 1rem;
+
+}
+
+.ic-app-header__menu-list-link:hover{
+    background: none !important;
+}
+
+.ic-app-header__secondary-navigation{
+	position: absolute;
+	top: 0;
+}
+
+body.primary-nav-expanded .ic-app-header__secondary-navigation{
+	position: absolute;
+	left: 1rem;
+
+}
+
+.ic-app-header__logomark-container{
+		display: none;
+	}
+
+.ic-app-header__secondary-navigation{
+	top: 0;
+	bottom: auto;
+}
+
+.ic-app-header__menu-list-link.ic-app-header__menu-list-link--nav-toggle .ic-icon-svg--navtoggle{
+
+	display: block;
+	margin: auto;
+
+}
+
+.ic-app-header__menu-list-item.ic-app-header__menu-list-item--active .menu-item-icon-container{
+
+	color: #fff;
+}
+
+.menu-item-icon-container{
+
+	width: auto;
+	margin-right: 0.5rem;
+
+}
+
+.ic-app-header__menu-list-item.ic-app-header__menu-list-item--active .ic-icon-svg{
+
+	fill: #fff;
+}
+
+body.primary-nav-expanded .ic-app-header__menu-list-item.ic-app-header__menu-list-item--active .menu-item__text{
+
+	color: #fff;
+}
+
+.ic-app-header__menu-list{
+
+	margin-top: 1rem;
+}
+
+.ic-app-header__menu-list-link{
+	text-align: left;
+}
+
+.ic-app-header__menu-list-link:focus{
+	box-shadow: none;
+	border: none;
+	outline: none;
+	background: transparent;
+}
+
+body.primary-nav-expanded .menu-item__text{
+
+	text-align: left;
+	display: inline-block;
+	font-size: 1em;
+}
+
+
+.ic-app-header__menu-list-link:not(.ic-app-header__menu-list-link--nav-toggle){
+
+	padding: 0.4375rem 0.8rem !important;
+}
+
+
+/*********************
+ÁREA DE CONTEÚDO
+*********************/
+
+
+body:not(.no-headers).primary-nav-expanded .ic-Layout-wrapper{
+
+	margin-left: 230px;
+
+}
+
+.primary-nav-expanded #nav-tray-portal [data-cid="Transition"] {
+
+	margin-left: 150px;
+}
+
+
+.ic-DashboardCard__header-title{
+
+	font-size: 1rem;
+}
+
+
+/*********************
+DISCIPLINA
+*********************/
+
+.item-group-container{
+
+	border: none !important;
+	background: #FFF;
+}
+
+.ig-row:before{
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: 0.25rem;
+    height: calc(100% + 2px);
+    background-color: #00AC18;
+    border-top: 1px solid #008312;
+    border-bottom: 1px solid #008312;
+   }
+
+/*********************
+CALENDÁRIO
+*********************/
+
+.navigate_today{
+	border-radius: 5px;
+}
+
+#context-list-holder, #undated-events{
+	background-color: transparent !important; 
+	margin-top: 1rem;
+}
+
+
+#minical{
+
+	border: none;
+	background: transparent !important;
+}
+
+#minical .fc-widget-content, #minical .fc-toolbar, .mini-cal-header, .mini_calendar{
+
+	border: none;
+}
+
+#minical .fc-widget-content{
+	margin-bottom: 10px;
+	padding-top: 5px;
+}
+
+#minical .fc-bg .fc-state-highlight{
+
+	border-radius: 50px;
+	padding: 16px;
+	background: #0d5b73;
+}
+
+#minical .event::after{
+
+	top: -1px;
+	padding: 5px;
+	border: none;
+	border-bottom: 2px solid #0d5b73;
+
+}
+
+
+#minical .fc-toolbar h2, #minical .fc-toolbar .h2, .navigation_title{
+
+	text-transform: capitalize;;
+}
+
+.fc-scroller{
+
+	overflow-y: hidden;
+}
+
+.fc-day-grid-container{
+	height: auto !important;
+}
+
+#create_new_event_link{
+
+    line-height: inherit;
+    background: #27ae60;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+}
+
+#create_new_event_link:after{
+	content: "Novo evento";
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+    color: #efefef;
+}
+
+.calendar_view_buttons{
+	border: none;
+	border: 1px solid #bbb;
+    border-radius: 5px;
+    background-color: #bbb;
+}
+
+
+.calendar_action_buttons .btn-group>.btn:first-child{
+	border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.calendar_action_buttons .btn-group>.btn:last-child{
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.btn.active{
+	background: #bbb;
+	border: none;
+}
+
+#calendar_header .ui-buttonset .ui-button{
+
+	background: none;
+    border: none;
+}
+
+.navigate_today{
+
+	border: none;
+	background: #27ae60;
+    color: #efefef;
+
+}
+
+.navigation_title_text{
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.fc-widget-header{
+	border: none !important;
+	margin-top: 1rem;
+}
+
+#context-list .context-list-toggle-box{
+	border-radius: 20px;
+}
+
+#context-list .context-list-toggle-box{
+
+	width: 13px;
+	height: 13px;
+}
+
+#calendar-app .fc-event, #calendar-drag-and-drop-container .fc-event{
+	background-color: currentColor !important;
+
+}
+
+.fc-content{
+	color: #fff;
+	padding: 0.3rem;
+}
+
+.fc-content i{
+	display: none;
+}
+
+.fc-time{
+    line-height: 1.5em;
+    margin-right: 0.2em;
+}
+
+.rs-section{
+		text-align: center;
+	}
+
+#context-list-holder{
+		text-align: left;
+	}
+
+/*********************
+Livro de Notas
+*********************/
+
+.student-name{
+	padding-left: 0.75rem;
+}
+
+.print-button{
+	margin-top: 1rem;
+	margin-left: 25rem;
+	background-color: #2f608c;
+	border: none;
+	border-radius: 5px;
+	font-size: 16px;
+	color: #fff;
+	padding: 0.8em;
+	font-weight: bold;
+}
+
+.print-button::before{
+	content: url('https://kb.espm.br/icone-impressora.png');
+	padding-right: 0.5rem;
+    vertical-align: middle;
+}
+
+/*********************
+Menu ajuda
+*********************/
+
+.contatos-ead h4{
+
+	color:var(--eHiXd-linkColor);
+	font-weight: bold !important;
+
+}
+
+.contatos-ead span{
+	font-size:var(--ELpHc-fontSizeSmall);
+	padding-left: 0.5rem;
+}
+
+.contatos-ead div{
+
+	margin-bottom: 0.5rem;
+}
