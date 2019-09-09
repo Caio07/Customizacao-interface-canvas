@@ -60,26 +60,32 @@ $(document).ready(function() {
 
   var currentUserName = ENV.current_user.display_name;
   //se estiver na página de notas
+//se estiver na página de notas
   if(window.location.pathname.indexOf('/grades') >= 0){
 
-    //Se não for um admin
-    if ($.inArray("admin", ENV.current_user_roles) == -1) {
-
-    	 $.ajax({url:'/api/v1/users/self/profile', dataType: "json", success:function(jsonUser){
+       $.ajax({url:'/api/v1/users/self/profile', dataType: "json", success:function(jsonUser){
          var student_id = jsonUser.login_id;
          //Adiciona nome e RA do aluno no início do conteúdo
-         $("#content").prepend("<h2 style='margin-bottom:2rem'>"+ currentUserName + " - " + student_id + "</h2>");
-     	}});
-    	 //Alteração de tradução
-        $("#content h2:contains('commons')'Curso')").html("Disciplinas que faço");
+         $("#content").prepend("<img src='https://kb.espm.br/logo-espm.png' style='float:left; margin-right: 1rem;'/><span>ESPM<br/>\
+      Rua Do Rosário, 90 - Centro - RIO DE JANEIRO - RJ - Tel.: (21)2216-2000 <br/>\
+      www.espm.br</span><hr><h2 style='margin-bottom:2rem; margin-top:2rem'>Nome: "+ currentUserName + "<br/>RA: " + student_id + "</h2><hr>");
+      }});
+       $("#content").append("<span style='margin-top:3rem; display: block'><b>Atenção:</b> Conceito parcial que poderá ser alterado até o final do curso, conforme respectivo regulamento.</span>");
+       //Alteração de tradução
+        $("#content h2:contains('Cursos')").html("Acompanhamento do lançamento de notas");
         $("#print-grades-button-container").hide();
          //Adiciona o botão de imprimir
         $("#content").append("<button class='print-button'> Imprimir </button)");
-     	$('.print-button').on('click', function() {  
-		  window.print();  
-		  return false;
-		});
-      }
+      $('.print-button').on('click', function() {  
+      window.print();  
+      return false;
+    });
+
+    //Se não for um admin
+   /* if ($.inArray("admin", ENV.current_user_roles) == -1) {
+
+    
+      }*/
     setTimeout(function() {
       //desabilita opção de testar uma nova nota
       $("td.assignment_score").unbind();

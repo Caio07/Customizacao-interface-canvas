@@ -692,7 +692,6 @@ body:not(.no-headers).primary-nav-expanded .ic-Layout-wrapper{
 
 .print-button{
 	margin-top: 1rem;
-	margin-left: 25rem;
 	background-color: #2f608c;
 	border: none;
 	border-radius: 5px;
