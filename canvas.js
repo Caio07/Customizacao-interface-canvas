@@ -96,17 +96,26 @@ $(document).ready(function() {
 		//por padrão aluno tem o progresso total do curso
 		$("#only_consider_graded_assignments").prop("checked", false);
 		//Interface das mensagens no mobile
-		$(".message-detail").addClass("remover-mensagem");
-		$(document).on("click", ".messages .message-middle-column", function(e){
-			e.preventDefault();
-			$(".message-list-scroller").removeClass("aparecer-mensagem");
- 			$(".message-detail").removeClass("remover-mensagem");
- 			$(".message-list-scroller").css("display","none");
- 			$(".message-detail").addClass("aparecer-mensagem");
- 			$(".messaging-wrapper").css("top","200px");
- 			setTimeout(function () { $(".panel").after("<div id='btn_voltar' style='background: #FFF;margin: 1rem 0.8rem;'><a href='#' onclick='voltarEmail()'> Voltar </a></div>")},400);
- 			
-		});
+	 function myFunction(x) {
+      if (x.matches) { // If media query matches
+        //Interface das mensagens no mobile
+      $(".message-detail").addClass("remover-mensagem");
+      $(document).on("click", ".messages .message-middle-column", function(e){
+        e.preventDefault();
+        $(".message-list-scroller").removeClass("aparecer-mensagem");
+        $(".message-detail").removeClass("remover-mensagem");
+        $(".message-list-scroller").css("display","none");
+        $(".message-detail").addClass("aparecer-mensagem");
+        $(".messaging-wrapper").css("top","200px");
+        setTimeout(function () { $(".panel").after("<div id='btn_voltar' style='background: #FFF;margin: 1rem 0.8rem;'><a href='#' onclick='voltarEmail()'> Voltar </a></div>")},400);
+        
+      });
+      } 
+    }
+
+    var x = window.matchMedia("(max-device-width: 480px)")
+    myFunction(x) // Call listener function at run time
+    x.addListener(myFunction) // Attach listener function on state changes
 
 		//Colocar nome e ID da disciplina no Breadcrumb
 		if ($("body").attr("class").match(/\bcontext-course_(.[0-9]*)/)) {
